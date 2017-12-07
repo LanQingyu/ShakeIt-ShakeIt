@@ -16,6 +16,7 @@
 		188B01961FD522CF000DD5E0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 188B01951FD522CF000DD5E0 /* main.m */; };
 		188B01A01FD522CF000DD5E0 /* ShakeIt_ShakeItTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 188B019F1FD522CF000DD5E0 /* ShakeIt_ShakeItTests.m */; };
 		188B01AB1FD522CF000DD5E0 /* ShakeIt_ShakeItUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 188B01AA1FD522CF000DD5E0 /* ShakeIt_ShakeItUITests.m */; };
+		21C48326CE13F6F02A0F294D /* libPods-ShakeIt-ShakeIt.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AE994755DBDB860C036AE579 /* libPods-ShakeIt-ShakeIt.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,9 @@
 		188B01A61FD522CF000DD5E0 /* ShakeIt-ShakeItUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "ShakeIt-ShakeItUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		188B01AA1FD522CF000DD5E0 /* ShakeIt_ShakeItUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ShakeIt_ShakeItUITests.m; sourceTree = "<group>"; };
 		188B01AC1FD522CF000DD5E0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6580C06DCF5CDF05BC2422B4 /* Pods-ShakeIt-ShakeIt.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShakeIt-ShakeIt.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ShakeIt-ShakeIt/Pods-ShakeIt-ShakeIt.debug.xcconfig"; sourceTree = "<group>"; };
+		87924CCE846419241D8F0335 /* Pods-ShakeIt-ShakeIt.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShakeIt-ShakeIt.release.xcconfig"; path = "Pods/Target Support Files/Pods-ShakeIt-ShakeIt/Pods-ShakeIt-ShakeIt.release.xcconfig"; sourceTree = "<group>"; };
+		AE994755DBDB860C036AE579 /* libPods-ShakeIt-ShakeIt.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ShakeIt-ShakeIt.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +64,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				21C48326CE13F6F02A0F294D /* libPods-ShakeIt-ShakeIt.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -87,6 +92,8 @@
 				188B019E1FD522CF000DD5E0 /* ShakeIt-ShakeItTests */,
 				188B01A91FD522CF000DD5E0 /* ShakeIt-ShakeItUITests */,
 				188B01811FD522CF000DD5E0 /* Products */,
+				CEE34E7E13EFD31859127392 /* Pods */,
+				72F462D59AC4E8831E771B7B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -135,6 +142,23 @@
 			path = "ShakeIt-ShakeItUITests";
 			sourceTree = "<group>";
 		};
+		72F462D59AC4E8831E771B7B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				AE994755DBDB860C036AE579 /* libPods-ShakeIt-ShakeIt.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CEE34E7E13EFD31859127392 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				6580C06DCF5CDF05BC2422B4 /* Pods-ShakeIt-ShakeIt.debug.xcconfig */,
+				87924CCE846419241D8F0335 /* Pods-ShakeIt-ShakeIt.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -142,9 +166,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 188B01AF1FD522CF000DD5E0 /* Build configuration list for PBXNativeTarget "ShakeIt-ShakeIt" */;
 			buildPhases = (
+				BA87DECFAE48A5C85CA055DC /* [CP] Check Pods Manifest.lock */,
 				188B017C1FD522CF000DD5E0 /* Sources */,
 				188B017D1FD522CF000DD5E0 /* Frameworks */,
 				188B017E1FD522CF000DD5E0 /* Resources */,
+				58585BD1267938964B3BE77C /* [CP] Embed Pods Frameworks */,
+				B0C49B49E677CD1C98D3CFE7 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -262,6 +289,57 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		58585BD1267938964B3BE77C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ShakeIt-ShakeIt/Pods-ShakeIt-ShakeIt-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B0C49B49E677CD1C98D3CFE7 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ShakeIt-ShakeIt/Pods-ShakeIt-ShakeIt-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BA87DECFAE48A5C85CA055DC /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ShakeIt-ShakeIt-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		188B017C1FD522CF000DD5E0 /* Sources */ = {
@@ -432,6 +510,7 @@
 		};
 		188B01B01FD522CF000DD5E0 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6580C06DCF5CDF05BC2422B4 /* Pods-ShakeIt-ShakeIt.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -446,6 +525,7 @@
 		};
 		188B01B11FD522CF000DD5E0 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 87924CCE846419241D8F0335 /* Pods-ShakeIt-ShakeIt.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
