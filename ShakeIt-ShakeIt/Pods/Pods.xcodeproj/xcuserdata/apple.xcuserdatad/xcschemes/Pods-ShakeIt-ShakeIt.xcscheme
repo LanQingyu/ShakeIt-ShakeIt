@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = '91F78DD15AB8EBB9AB0A0429F6087B24'
+               BlueprintIdentifier = 'F61599606CF8545F636E1795B367D4F0'
                BlueprintName = 'Pods-ShakeIt-ShakeIt'
                ReferencedContainer = 'container:Pods.xcodeproj'
                BuildableName = 'libPods-ShakeIt-ShakeIt.a'>

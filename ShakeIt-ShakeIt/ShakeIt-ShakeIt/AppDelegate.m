@@ -7,7 +7,7 @@
 //
 
 #import "AppDelegate.h"
-#import "ViewController.h"
+#import "ShouyeViewController.h"
 @interface AppDelegate ()
 
 @end
@@ -19,7 +19,23 @@
     // Override point for customization after application launch.
     _window = [[UIWindow alloc]initWithFrame:[UIScreen mainScreen].bounds];
     [_window makeKeyAndVisible];
-    _window.rootViewController = [ViewController new];
+    
+    UINavigationController *nav = [[UINavigationController alloc]initWithRootViewController:[ShouyeViewController new]];
+    nav.navigationBar.translucent = NO;
+    _window.rootViewController = nav;
+    
+    
+//    UIImage *backButtonImage = [[UIImage imageNamed:@"back"] resizableImageWithCapInsets:UIEdgeInsetsMake(0, 0, 0, 0)];
+//    
+//    [[UIBarButtonItem appearance] setBackButtonBackgroundImage:backButtonImage forState:UIControlStateNormal barMetrics:UIBarMetricsDefault];
+//    
+//    [[UIBarButtonItem appearance] setBackButtonTitlePositionAdjustment:UIOffsetMake(NSIntegerMin, NSIntegerMin) forBarMetrics:UIBarMetricsDefault];
+    
+   
+    
+   
+    
+    
     return YES;
 }
 

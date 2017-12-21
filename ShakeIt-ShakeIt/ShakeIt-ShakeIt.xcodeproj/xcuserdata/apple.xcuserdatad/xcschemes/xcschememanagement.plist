@@ -7,7 +7,25 @@
 		<key>ShakeIt-ShakeIt.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>2</integer>
+			<integer>3</integer>
+		</dict>
+	</dict>
+	<key>SuppressBuildableAutocreation</key>
+	<dict>
+		<key>188B017F1FD522CF000DD5E0</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>188B019A1FD522CF000DD5E0</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>188B01A51FD522CF000DD5E0</key>
+		<dict>
+			<key>primary</key>
+			<true/>
 		</dict>
 	</dict>
 </dict>
