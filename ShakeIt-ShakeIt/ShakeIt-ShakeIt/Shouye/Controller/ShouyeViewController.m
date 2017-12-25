@@ -12,6 +12,7 @@
 #import "DengluViewController.h"
 #import "ZhuceViewController.h"
 #import "AddImageViewController.h"
+#import "LunboTingViewController.h"
 @interface ShouyeViewController ()
 
 
@@ -31,10 +32,22 @@
     [button setTitle:@"添加相片" forState:UIControlStateNormal];
     button.titleLabel.font = [UIFont systemFontOfSize:30];
     button.backgroundColor = [UIColor redColor];
-    [button addTarget:self action:@selector(clickButton) forControlEvents:UIControlEventTouchUpInside];
+    [button addTarget:self action:@selector(addImage) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:button];
     [button mas_makeConstraints:^(MASConstraintMaker *make) {
         make.center.equalTo(self.view);
+        make.size.mas_equalTo(CGSizeMake(150, 50));
+    }];
+    
+    UIButton *button4 = [UIButton buttonWithType:UIButtonTypeSystem];
+    [button4 setTitle:@"摇一摇" forState:UIControlStateNormal];
+    button4.titleLabel.font = [UIFont systemFontOfSize:30];
+    button4.backgroundColor = [UIColor redColor];
+    [button4 addTarget:self action:@selector(shakeItshakeIt) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:button4];
+    [button4 mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.equalTo(button.mas_bottom).with.offset(50);
+        make.centerX.equalTo(self.view);
         make.size.mas_equalTo(CGSizeMake(150, 50));
     }];
     
@@ -73,10 +86,15 @@
     NSLog(@"注册");
     [self.navigationController pushViewController:[ZhuceViewController new] animated:YES];
 }
--(void)clickButton
+-(void)addImage
 {
     NSLog(@"添加照片");
     [self.navigationController pushViewController:[AddImageViewController new] animated:YES];
+}
+-(void)shakeItshakeIt
+{
+    NSLog(@"摇一摇");
+    [self.navigationController pushViewController:[LunboTingViewController new] animated:YES];
 }
 
 //+(NSString *)MD5ForLower32Bate:(NSString *)str{
