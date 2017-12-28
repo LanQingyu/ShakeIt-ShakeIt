@@ -12,9 +12,10 @@
 		182748621FE7636300EDC6AB /* ZhuceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 182748611FE7636300EDC6AB /* ZhuceViewController.m */; };
 		182748651FE76C1C00EDC6AB /* InputUnitVIew.m in Sources */ = {isa = PBXBuildFile; fileRef = 182748641FE76C1C00EDC6AB /* InputUnitVIew.m */; };
 		185B56AE1FE9F90500743A2B /* AddImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 185B56AD1FE9F90500743A2B /* AddImageViewController.m */; };
-		185B56B31FEA346A00743A2B /* WechatIMG9.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 185B56B21FEA346A00743A2B /* WechatIMG9.jpeg */; };
 		185C0FA51FEC974400302427 /* LunboTingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 185C0FA41FEC974400302427 /* LunboTingViewController.m */; };
 		185C0FA91FECECC000302427 /* PhotoListCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 185C0FA81FECECC000302427 /* PhotoListCollectionViewCell.m */; };
+		1880EBAE1FF3820800779CC4 /* PhotoListView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1880EBAD1FF3820800779CC4 /* PhotoListView.m */; };
+		1880EBB11FF3824800779CC4 /* PhotoListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1880EBB01FF3824800779CC4 /* PhotoListCell.m */; };
 		188B01851FD522CF000DD5E0 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 188B01841FD522CF000DD5E0 /* AppDelegate.m */; };
 		188B01881FD522CF000DD5E0 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 188B01871FD522CF000DD5E0 /* ViewController.m */; };
 		188B018B1FD522CF000DD5E0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 188B01891FD522CF000DD5E0 /* Main.storyboard */; };
@@ -55,12 +56,15 @@
 		182748641FE76C1C00EDC6AB /* InputUnitVIew.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InputUnitVIew.m; sourceTree = "<group>"; };
 		185B56AC1FE9F90500743A2B /* AddImageViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AddImageViewController.h; sourceTree = "<group>"; };
 		185B56AD1FE9F90500743A2B /* AddImageViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AddImageViewController.m; sourceTree = "<group>"; };
-		185B56B21FEA346A00743A2B /* WechatIMG9.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = WechatIMG9.jpeg; sourceTree = "<group>"; };
 		185C0FA31FEC974400302427 /* LunboTingViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LunboTingViewController.h; sourceTree = "<group>"; };
 		185C0FA41FEC974400302427 /* LunboTingViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LunboTingViewController.m; sourceTree = "<group>"; };
 		185C0FA61FECE78000302427 /* Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Header.h; sourceTree = "<group>"; };
 		185C0FA71FECECC000302427 /* PhotoListCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PhotoListCollectionViewCell.h; sourceTree = "<group>"; };
 		185C0FA81FECECC000302427 /* PhotoListCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PhotoListCollectionViewCell.m; sourceTree = "<group>"; };
+		1880EBAC1FF3820800779CC4 /* PhotoListView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PhotoListView.h; sourceTree = "<group>"; };
+		1880EBAD1FF3820800779CC4 /* PhotoListView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PhotoListView.m; sourceTree = "<group>"; };
+		1880EBAF1FF3824800779CC4 /* PhotoListCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PhotoListCell.h; sourceTree = "<group>"; };
+		1880EBB01FF3824800779CC4 /* PhotoListCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PhotoListCell.m; sourceTree = "<group>"; };
 		188B01801FD522CF000DD5E0 /* ShakeIt-ShakeIt.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ShakeIt-ShakeIt.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		188B01831FD522CF000DD5E0 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		188B01841FD522CF000DD5E0 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -126,6 +130,10 @@
 				182748641FE76C1C00EDC6AB /* InputUnitVIew.m */,
 				185C0FA71FECECC000302427 /* PhotoListCollectionViewCell.h */,
 				185C0FA81FECECC000302427 /* PhotoListCollectionViewCell.m */,
+				1880EBAC1FF3820800779CC4 /* PhotoListView.h */,
+				1880EBAD1FF3820800779CC4 /* PhotoListView.m */,
+				1880EBAF1FF3824800779CC4 /* PhotoListCell.h */,
+				1880EBB01FF3824800779CC4 /* PhotoListCell.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -179,7 +187,6 @@
 		188B01821FD522CF000DD5E0 /* ShakeIt-ShakeIt */ = {
 			isa = PBXGroup;
 			children = (
-				185B56B21FEA346A00743A2B /* WechatIMG9.jpeg */,
 				182748591FE75E5A00EDC6AB /* Shouye */,
 				185C0FA61FECE78000302427 /* Header.h */,
 				188B01831FD522CF000DD5E0 /* AppDelegate.h */,
@@ -341,7 +348,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				188B01931FD522CF000DD5E0 /* LaunchScreen.storyboard in Resources */,
-				185B56B31FEA346A00743A2B /* WechatIMG9.jpeg in Resources */,
 				188B01901FD522CF000DD5E0 /* Assets.xcassets in Resources */,
 				188B018B1FD522CF000DD5E0 /* Main.storyboard in Resources */,
 			);
@@ -420,6 +426,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				188B018E1FD522CF000DD5E0 /* ShakeIt_ShakeIt.xcdatamodeld in Sources */,
+				1880EBB11FF3824800779CC4 /* PhotoListCell.m in Sources */,
 				185C0FA91FECECC000302427 /* PhotoListCollectionViewCell.m in Sources */,
 				1827485F1FE7634800EDC6AB /* DengluViewController.m in Sources */,
 				188B01881FD522CF000DD5E0 /* ViewController.m in Sources */,
@@ -430,6 +437,7 @@
 				182748651FE76C1C00EDC6AB /* InputUnitVIew.m in Sources */,
 				188B01851FD522CF000DD5E0 /* AppDelegate.m in Sources */,
 				182748581FE75E0500EDC6AB /* ShouyeViewController.m in Sources */,
+				1880EBAE1FF3820800779CC4 /* PhotoListView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

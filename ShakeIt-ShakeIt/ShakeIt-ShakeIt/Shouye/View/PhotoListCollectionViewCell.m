@@ -9,12 +9,8 @@
 #import "PhotoListCollectionViewCell.h"
 
 @implementation PhotoListCollectionViewCell
--(instancetype)initWithFrame:(CGRect)frame
-{
-    self = [super initWithFrame:frame];
-    if (self) {
-        
-    }
-    return self;
-}
+
+
+
+
 @end

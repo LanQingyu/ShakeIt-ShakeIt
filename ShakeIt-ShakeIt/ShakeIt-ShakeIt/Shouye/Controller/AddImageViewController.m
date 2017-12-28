@@ -29,8 +29,8 @@
 {
     [super loadView];
     [self addButtonFunction];
-    [self addImagePicker];
     _imageView = [UIImageView new];
+    _imageView.contentMode = UIViewContentModeScaleAspectFit;
     _imageView.backgroundColor = [UIColor redColor];
     [self.view addSubview:_imageView];
     [_imageView mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -62,19 +62,18 @@
     }];
     
 }
--(void)addImagePicker
+
+- (void)pickerImage:(UIButton *)button
 {
     _imagePicker = [UIImagePickerController new];
     _imagePicker.delegate = self;
-}
-- (void)pickerImage:(UIButton *)button
-{
     NSLog(@"添加");
     UIAlertController *alert = [UIAlertController new];
     [alert addAction:[UIAlertAction actionWithTitle:@"用相机拍摄" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
         NSLog(@"拍摄照片");
         _imagePicker.sourceType = UIImagePickerControllerSourceTypeCamera;
         _imagePicker.videoQuality = UIImagePickerControllerQualityTypeHigh;
+        _imagePicker.allowsEditing = YES;
         [self presentViewController:_imagePicker animated:YES completion:nil];
 
     }]];
@@ -82,7 +81,8 @@
         NSLog(@"从手机相册选择");
         _imagePicker.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
         _imagePicker.allowsEditing = YES;
-        [self presentViewController:_imagePicker animated:YES completion:nil];
+        
+         [self presentViewController:_imagePicker animated:YES completion:nil];
     }]];
     [alert addAction:[UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
         NSLog(@"取消");
@@ -104,7 +104,12 @@
     //    UIImagePickerControllerReferenceURL // 引用相册的URL
     //    UIImagePickerControllerMediaMetadata // 拍照的元数据
     //    UIImagePickerControllerLivePhoto // PHLivePhoto
-    
+    NSString *type = [info objectForKey:UIImagePickerControllerMediaType];
+    NSLog(@"%@", type);
+    UIImage *editedImage = [info objectForKey:UIImagePickerControllerEditedImage];
+    _imageView.image = editedImage;
+//    if ([type isEqualToString:(NSString*)kUTTypeImage]&&picker.sourceType==UIImagePickerControllerSourceTypeCamera) {
+
     
     [picker dismissViewControllerAnimated:YES completion:nil];
 }
