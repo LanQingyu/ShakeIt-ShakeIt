@@ -75,7 +75,6 @@
     
 }
 -(void)regist{
-    NSLog(@"注册");
 }
 -(void)cancel{
     [self.navigationController popViewControllerAnimated:YES];

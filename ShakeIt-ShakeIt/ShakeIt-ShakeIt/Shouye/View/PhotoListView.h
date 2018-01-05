@@ -18,6 +18,10 @@ typedef void (^pushViewControllerBlock)(void);
 
 @interface PhotoListView : UIView<UICollectionViewDelegate, UICollectionViewDataSource>
 @property(nonatomic, strong)UICollectionView *collectionView;
+@property(nonatomic, strong)NSMutableArray *dataArray;
+@property(nonatomic, assign)BOOL isReloadData;
+
+
 @property(nonatomic, assign)id<pushViewControllerDelegate>delegate;
 @property(nonatomic, copy)pushViewControllerBlock block;
 

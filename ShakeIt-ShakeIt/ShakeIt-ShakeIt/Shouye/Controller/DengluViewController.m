@@ -75,11 +75,9 @@
 }
 -(void)login
 {
-    NSLog(@"登录");
 }
 -(void)regist
 {
-    NSLog(@"注册");
 }
 
 

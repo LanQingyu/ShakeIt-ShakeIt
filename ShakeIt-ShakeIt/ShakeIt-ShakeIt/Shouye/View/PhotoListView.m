@@ -10,6 +10,8 @@
 #import "PhotoListCell.h"
 #import "Header.h"
 #import <Masonry.h>
+
+
 @implementation PhotoListView
 
 -(instancetype)initWithFrame:(CGRect)frame
@@ -22,7 +24,6 @@
         flowLayout.minimumLineSpacing = 1.8 * FitHeight;
         flowLayout.scrollDirection = UICollectionViewScrollDirectionVertical;
         
-        
         _collectionView = [[UICollectionView alloc]initWithFrame:self.frame collectionViewLayout:flowLayout];
         _collectionView.autoresizingMask = UIViewAutoresizingFlexibleHeight | UIViewAutoresizingFlexibleWidth;
         _collectionView.backgroundColor = [UIColor colorWithRed:0.94 green:0.94 blue:0.94 alpha:1];
@@ -31,26 +32,53 @@
         _collectionView.scrollEnabled = YES;
         [self addSubview:_collectionView];
         [_collectionView registerClass:[PhotoListCell class] forCellWithReuseIdentifier:@"identifie"];
+        _dataArray = [NSMutableArray array];
+        
+//        if (!_dataArray) {
+//            NSArray *array = @[@"1", @"2", @"3", @"4"];
+//            NSArray *array = @[@"1", @"2", @"3"];
+//            NSArray *array = @[];
+//            _dataArray = [NSMutableArray arrayWithArray:array];
+//            _dataArray = [NSMutableArray array];
+//        }
     }
     return self;
 }
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
 {
-    return 100;
+    return _dataArray.count + 1;
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
     PhotoListCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"identifie" forIndexPath:indexPath];
-    cell.backgroundColor = [UIColor colorWithRed:arc4random() % 256 / 255.0 green:arc4random() % 256 / 255.0 blue:arc4random() % 256 / 255.0 alpha:1];
+    cell.backgroundColor = LRRandomColor;
+
+    if (indexPath.row == _dataArray.count) {
+        cell.imageView.image = kGetImage(@"未点击");
+        cell.imageView.highlightedImage = kGetImage(@"点击状态");
+    }
+    else{
+        cell.imageView.image = _dataArray[indexPath.row];
+        cell.imageView.highlightedImage = _dataArray[indexPath.row];
+    }
     return cell;
 }
+
 -(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
 {
-    [self.delegate pushViewController];
-    self.block();
-    NSLog(@"%ld", indexPath.row);
+    if (indexPath.row == _dataArray.count) {
+        self.block();
+    }else{
+
+    
+    }
 }
+-(void)setIsReloadData:(BOOL)isReloadData
+{
+    [_collectionView reloadData];
+}
+
 
 
 @end

@@ -20,6 +20,7 @@
     self.view.backgroundColor = [UIColor whiteColor];
     [self.navigationItem setBackBarButtonItem:[[UIBarButtonItem alloc]initWithTitle:nil style:UIBarButtonItemStylePlain target:nil action:nil]];
     
+    
 }
 -(void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
 {

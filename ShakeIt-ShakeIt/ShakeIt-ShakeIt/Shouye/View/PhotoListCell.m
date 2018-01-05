@@ -13,9 +13,16 @@
 {
     self = [super initWithFrame:frame];
     if (self) {
-        
+        _imageView = [[UIImageView alloc]init];
+        _imageView.contentMode = UIViewContentModeScaleAspectFit;
+        [self.contentView addSubview:_imageView];
     }
     return self;
+}
+-(void)layoutSubviews
+{
+    [super layoutSubviews];
+    _imageView.frame = self.contentView.frame;
 }
 
 
