@@ -9,7 +9,7 @@
 #import "PhotoListView.h"
 #import "PhotoListCell.h"
 #import "Header.h"
-#import <Masonry.h>
+
 
 
 @implementation PhotoListView
@@ -34,13 +34,7 @@
         [_collectionView registerClass:[PhotoListCell class] forCellWithReuseIdentifier:@"identifie"];
         _dataArray = [NSMutableArray array];
         
-//        if (!_dataArray) {
-//            NSArray *array = @[@"1", @"2", @"3", @"4"];
-//            NSArray *array = @[@"1", @"2", @"3"];
-//            NSArray *array = @[];
-//            _dataArray = [NSMutableArray arrayWithArray:array];
-//            _dataArray = [NSMutableArray array];
-//        }
+
     }
     return self;
 }
@@ -70,8 +64,7 @@
     if (indexPath.row == _dataArray.count) {
         self.block();
     }else{
-
-    
+        
     }
 }
 -(void)setIsReloadData:(BOOL)isReloadData

@@ -7,8 +7,7 @@
 //
 
 #import "AddImageViewController.h"
-#import <Masonry.h>
-
+#import "Header.h"
 
 @interface AddImageViewController ()<UINavigationControllerDelegate, UIImagePickerControllerDelegate>
 

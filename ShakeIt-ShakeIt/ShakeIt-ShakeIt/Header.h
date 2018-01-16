@@ -9,7 +9,8 @@
 #ifndef Header_h
 #define Header_h
 
-
+#import <Masonry.h>
+#import <AFNetworking.h>
 
 #define FitWidth [UIScreen mainScreen].bounds.size.width / 375
 #define FitHeight [UIScreen mainScreen].bounds.size.height / 667
@@ -19,7 +20,7 @@
 //获取屏幕宽高
 #define ScreenFrame self.view.frame
 #define ScreenWidth [[UIScreen mainScreen] bounds].size.width
-#define ScreenHeight [[UIScreen mainScreen] bounds].size.heigh
+#define ScreenHeight [[UIScreen mainScreen] bounds].size.height
 //判断iOS8或更高系统版本(谨慎使用,floatValue是不靠谱的,具体原因请看:http://www.jianshu.com/p/528897755dc8)
 #define IOS8UP ([[UIDevice currentDevice].systemVersion floatValue] >= 8)
 //设置颜色RGB值
