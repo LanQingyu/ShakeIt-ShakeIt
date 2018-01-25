@@ -13,6 +13,7 @@
 #import "ZhuceViewController.h"
 #import "AddImageViewController.h"
 #import "LunboTingViewController.h"
+#import "ZifuchuanViewController.h"
 @interface ShouyeViewController ()
 
 
@@ -72,17 +73,7 @@
         make.size.mas_equalTo(CGSizeMake(150, 50));
     }];
     
-    UIButton *button4 = [UIButton buttonWithType:UIButtonTypeSystem];
-    [button4 setTitle:@"摇一摇" forState:UIControlStateNormal];
-    button4.titleLabel.font = [UIFont systemFontOfSize:30];
-    button4.backgroundColor = [UIColor redColor];
-    [button4 addTarget:self action:@selector(shakeItshakeIt) forControlEvents:UIControlEventTouchUpInside];
-    [self.view addSubview:button4];
-    [button4 mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.equalTo(button.mas_bottom).with.offset(50);
-        make.centerX.equalTo(self.view);
-        make.size.mas_equalTo(CGSizeMake(150, 50));
-    }];
+    
     
     UIButton *button2 = [UIButton buttonWithType:UIButtonTypeSystem];
     [button2 setTitle:@"登录" forState:UIControlStateNormal];
@@ -108,6 +99,30 @@
         make.size.mas_equalTo(CGSizeMake(100, 50));
     }];
     
+    UIButton *button4 = [UIButton buttonWithType:UIButtonTypeSystem];
+    [button4 setTitle:@"摇一摇" forState:UIControlStateNormal];
+    button4.titleLabel.font = [UIFont systemFontOfSize:30];
+    button4.backgroundColor = [UIColor redColor];
+    [button4 addTarget:self action:@selector(shakeItshakeIt) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:button4];
+    [button4 mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.equalTo(button.mas_bottom).with.offset(50);
+        make.centerX.equalTo(self.view);
+        make.size.mas_equalTo(CGSizeMake(150, 50));
+    }];
+    
+    UIButton *button5 = [UIButton buttonWithType:UIButtonTypeSystem];
+    [button5 setTitle:@"生成字符串" forState:UIControlStateNormal];
+    button5.titleLabel.font = [UIFont systemFontOfSize:30];
+    button5.backgroundColor = [UIColor redColor];
+    [button5 addTarget:self action:@selector(shengcheng) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:button5];
+    [button5 mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.equalTo(button4.mas_bottom).with.offset(50);
+        make.centerX.equalTo(self.view);
+        make.size.mas_equalTo(CGSizeMake(200, 50));
+    }];
+    
 }
 -(void)login
 {
@@ -124,6 +139,9 @@
 -(void)shakeItshakeIt
 {
     [self.navigationController pushViewController:[LunboTingViewController new] animated:YES];
+}
+-(void)shengcheng{
+    [self.navigationController pushViewController:[ZifuchuanViewController new] animated:YES];
 }
 
 //+(NSString *)MD5ForLower32Bate:(NSString *)str{
